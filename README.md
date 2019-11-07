@@ -1,6 +1,6 @@
 # DragNDrop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2. Its a simple implementation of Angular 7 drag and drop feature for list items using angular cdk and angular material 
 
 ## Development server
 
