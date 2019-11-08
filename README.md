@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2. Its a simple implementation of Angular 7 drag and drop feature for list items using angular cdk and angular material 
 
+1. Feature I - Drag and drop feature on list . to rearrange data in list or to move data within 2 list.
+2. Feature II - File upload using drag and drop 
+ 
+ use toggle button to move between features . 
+ 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
