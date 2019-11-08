@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop'
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-root',
@@ -7,28 +7,13 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'DragNDrop';
-  artists = [
-    'Artist I - Davido',
-    'Artist II - Wizkid',
-    'Artist III - Burna Boy',
-    'Artist IV - Kiss Daniel',
-    'Artist V - Mayorkun',
-    'Artist VI - Mr. Eazi',
-    'Artist VII - Tiwa Savage',
-    'Artist VIII - Blaqbonez',
-    'Artist IX - Banky W',
-    'Artist X - Yemi Alade'
-  ];
+  title :string = 'DragNDrop';
+  toggle : boolean = true;
+  artists = ['Artist I - Davido','Artist II - Wizkid', 'Artist III - Burna Boy', 'Artist IV - Kiss Daniel', 'Artist V - Mayorkun',
+  'Artist VI - Mr. Eazi','Artist VII - Tiwa Savage','Artist VIII - Blaqbonez', 'Artist IX - Banky W','Artist X - Yemi Alade'];
 
-  alteArtists = [
-    'Artist 1 - Odunsi',
-    'Artist 2 - Nonso',
-    'Artist 3 - Wavy the creator',
-    'Artist 4 - Dwin',
-    'Artist 5 - SDC',
-    'Artist 6 - Teni'
-  ];
+  alteArtists = ['Artist 1 - Odunsi','Artist 2 - Nonso', 'Artist 3 - Wavy the creator',
+  'Artist 4 - Dwin','Artist 5 - SDC', 'Artist 6 - Teni'];
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer !== event.container) {
@@ -36,5 +21,9 @@ export class AppComponent {
     } else {
       moveItemInArray(event.previousContainer.data, event.previousIndex, event.currentIndex);
     }
+  }
+
+  toggleView(){
+    this.toggle = !this.toggle;
   }
 }

@@ -4,15 +4,20 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<h2>Here are some links to help you start: </h2>
+<button (click)= "toggleView()">Toggle</button><br><br>
 
-<div style="display: flex">
-  <div cdkDropList (cdkDropListDropped)="drop($event)" [cdkDropListData]="artists" [cdkDropListConnectedTo]="secondList" #firstList="cdkDropList" style="width: 30%">
+<div style="display: flex" *ngIf = "toggle">
+  <div cdkDropList (cdkDropListDropped)="drop($event)" [cdkDropListData]="artists" [cdkDropListConnectedTo]="[secondList]"
+    #firstList="cdkDropList" style="width: 30%">
     <div class="pop" *ngFor="let artist of artists" cdkDrag>{{artist}}</div>
   </div>
 
-  <div cdkDropList (cdkDropListDropped)="drop($event)" [cdkDropListData]="alteArtists" [cdkDropListConnectedTo]="firstList" #secondList="cdkDropList" style="width: 30%">
+  <div cdkDropList (cdkDropListDropped)="drop($event)" [cdkDropListData]="alteArtists" [cdkDropListConnectedTo]="[firstList]"
+    #secondList="cdkDropList" style="width: 30%">
     <div class="pop" *ngFor="let artist of alteArtists" cdkDrag>{{artist}}</div>
   </div>
+</div>
 
+<div *ngIf = "!toggle">
+  <app-file-drag-drop></app-file-drag-drop>
 </div>

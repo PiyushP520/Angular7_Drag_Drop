@@ -4,10 +4,14 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FileDragDropDirective } from './file-drag-drop.directive';
+import { FileDragDropComponent } from './file-drag-drop.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FileDragDropDirective,
+    FileDragDropComponent
   ],
   imports: [
     BrowserModule,
